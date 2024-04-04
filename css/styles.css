@@ -1,0 +1,54 @@
+body{
+    padding: 0;
+    margin: 0;  
+    background-color: azure;
+}
+
+
+#navbarNav{
+    a{
+        font-size: 30px;
+    }
+}
+.headerImage {
+    background-image: url('../img/fondo.jpg')!important;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 400px!important; 
+}
+
+.sectionWithBackground {
+    background-image: url('../img/1.jpg');
+    background-size: contain;
+    height: 500px;
+    width: 100%!important;
+    background-position: center;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    
+}
+
+.sectionWithBackground h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #fff;
+    padding-left: 10px;
+    padding: 10px 0 0 10px;
+}
+
+.sectionWithBackground p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 10px 0 0 10px;
+    
+}
+.sectionWithBackground li {
+    
+    text-align: left;
+    
+}
