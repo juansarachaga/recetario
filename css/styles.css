@@ -58,3 +58,14 @@ body{
     background-color: #f9f9f9;
     padding: 40px;
 }
+
+
+/* Animación del botón */
+@keyframes animacionBoton {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.animacionBoton {
+    animation: animacionBoton 1s ease forwards; /* Ajusta la duración de la animación */
+}
