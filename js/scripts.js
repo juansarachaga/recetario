@@ -40,3 +40,43 @@ document.addEventListener("DOMContentLoaded", function() {
     // Agrega el evento click al botón
     btnAcocinar.addEventListener("click", handleClick);
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    // Función para manejar el evento click del botón
+    function handleClick(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        var dropdownMenu = this.nextElementSibling; // Obtiene el menú desplegable asociado al botón clickeado
+
+        // Alternar la visibilidad del menú desplegable
+        if (dropdownMenu.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        } else {
+            // Ocultar todos los menús desplegables antes de mostrar el menú clickeado
+            var allDropdownMenus = document.querySelectorAll('.dropdown-menu');
+            allDropdownMenus.forEach(function(menu) {
+                menu.classList.remove('show');
+            });
+            dropdownMenu.classList.add('show');
+        }
+    }
+
+    // Agrega el evento click a todos los botones de dropdown
+    dropdownToggles.forEach(function(button) {
+        button.addEventListener('click', handleClick);
+    });
+
+    // Cierra el menú desplegable si se hace clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(function(menu) {
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            });
+        }
+    });
+});
