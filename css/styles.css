@@ -126,6 +126,9 @@ body{
     padding: 40px;
 }
 
+.contenedor2 img {
+  max-width: 400px;
+}
 
 /* Animación del botón */
 @keyframes animacionBoton {
