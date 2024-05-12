@@ -40,16 +40,21 @@ body{
     height: 400px!important; 
 }
 .separador{
-
     width: 100%;
     background-color: #dcdcdc;
-
 }
 
 .separador h2 {
     color: #333;
     font-size: 35px;
     font-weight: bold;
+}
+
+.separador2 h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .sectionWithBackground {
@@ -82,9 +87,7 @@ body{
     
 }
 .sectionWithBackground li {
-    
     text-align: left;
-    
 }
 
 .contenedor {
@@ -96,13 +99,22 @@ body{
 .contenedor .contenido {
     width: 55%;
     padding: 20px;
-    
-
 }
 
 .contenedor .imagen {
     width: 45%;
 }
+
+.contenido p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contenido strong {
+  color: #e74c3c;
+}
+
 .imagen img {
     width: 100%;
     height: auto;
