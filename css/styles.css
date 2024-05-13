@@ -176,7 +176,7 @@ body{
     display: flex;
     justify-content: center; 
     margin-top: 20px;
-
+    margin-bottom: 20px;
 }
 
 .ancho40, .ancho60 {
