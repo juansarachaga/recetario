@@ -80,9 +80,9 @@ body {
     padding: 20px 40px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 480px) {
     .contenedor.message {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -130,4 +130,47 @@ body {
 .animacionBoton {
     animation: animacionBoton 1s ease forwards;
     /* Ajusta la duración de la animación */
+}
+
+/* prueba */
+/* los colores no son obligatorios, son para que den su opinión si les agrada */
+
+@media screen and (max-width: 767px) {
+    .contenedor {
+        flex-direction: column;
+        padding: 20px;
+        background: #FFF6D5;
+    }
+
+    .invitacion {
+        justify-content: center;
+        display: flex;
+    }
+
+    .texto {
+        justify-content: center;
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .contenedor {
+        flex-direction: row;
+        padding: 20px;
+        background: #FFF6D5;
+    }
+
+    .invitacion {
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .texto {
+        justify-content: center;
+        display: flex;
+    }
+
 }
