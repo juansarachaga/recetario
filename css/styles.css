@@ -39,6 +39,14 @@ body{
     width: 100%;
     height: 400px!important; 
 }
+
+.headerImage4 {
+    background-image: url('../img/fondo5.jpg')!important;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 400px!important; 
+}
 .separador{
     width: 100%;
     background-color: #dcdcdc;
