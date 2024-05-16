@@ -150,6 +150,40 @@ body{
 
 /* estilos del dropdown */
 
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .contenedor {
+        flex-direction: column;
+        padding: 20px;
+        background: #FFF6D5;
+    }
+
+    .invitacion {
+        justify-content: center;
+        display: flex;
+    }
+
+    .texto {
+        justify-content: center;
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+
+    .contenedor2.separador {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .contenedor {
+        flex-direction: row;
+        padding: 20px;
+        background: #FFF6D5;
+    }
 .dropdown-menu {
     padding: 20px;
     max-width: 70%;
@@ -218,6 +252,28 @@ body{
     margin-bottom: 20px;
 }
 
+    .texto {
+        justify-content: center;
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+
+    .contenedor.message {
+        flex-direction: row;
+    }
+
+    .contenedor2.separador {
+        display: inline-block;
+    }
+
+    /*.m-0 {
+        display: inline-block;
+    }*/
+
+}
 .texto {
     font-size: 28px;
     line-height: 1.6;
