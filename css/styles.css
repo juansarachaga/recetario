@@ -135,7 +135,7 @@ body {
 /* prueba */
 /* los colores no son obligatorios, son para que den su opinión si les agrada */
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
     .contenedor {
         flex-direction: column;
         padding: 20px;
@@ -156,6 +156,9 @@ body {
         position: relative;
     }
 
+    .contenedor2.separador {
+        display: inline-block;
+    }
 
 }
 
@@ -185,5 +188,13 @@ body {
     .contenedor.message {
         flex-direction: row;
     }
+
+    .contenedor2.separador {
+        display: inline-block;
+    }
+
+    /*.m-0 {
+        display: inline-block;
+    }*/
 
 }
