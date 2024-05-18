@@ -66,9 +66,9 @@ body{
 }
 
 .sectionWithBackground {
-    background-image: url('../img/1.jpg');
+    background-image: url('../img/1b.jpg');
     background-size: contain;
-    height: 500px;
+    height: 100%;
     width: 100%!important;
     background-position: center;
     color: #fff;
@@ -98,7 +98,20 @@ body{
     text-align: left;
 }
 
-.contenedor {
+.sectionWithBackgroundA {
+    background-image: url("../img/1a.jpg");
+    background-size: contain;
+    height: 259px;
+    width: 100% !important;
+    /* background-position: center; */
+    background-repeat: repeat-x;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .contenedor {
     display: flex;
     align-items: center;
     justify-content: space-between;
