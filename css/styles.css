@@ -308,3 +308,64 @@ button[type="submit"]:hover {
 .integrante-infor p {
     color: #666;
 }
+
+.seccion-frase {
+    background-image: url('../img/fondo7.jpg');
+    margin: auto;
+    padding: 50px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 13px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+.frase-contenedor h2 {
+    font-size: 48px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.seccion-resenias {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    padding: 50px 0;
+}
+
+.contenedor-resenias {
+    display: flex;
+    width: 160%;
+    animation: scroll 180s linear infinite;
+}
+
+.resenia {
+    flex: 1 0 17%; /* alinear las 6 reviews en una fila... creo */
+    max-width: 17%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.resenia p {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #666;
+}
+
+.resenia h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.estrellas {
+    margin-top: 10px;
+    color: #fa8072;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
