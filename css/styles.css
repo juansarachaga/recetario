@@ -321,3 +321,107 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+/* estilos de la pg. Nosotros */
+
+.seccion-equipo {
+    text-align: center;
+    padding: 50px;
+    background-color: #e8e8e8; /* Gris Claro */
+}
+
+.seccion-equipo h2 {
+    margin-bottom: 40px;
+    color: #2c3e50; /* Azul Marino */
+}
+
+.integrante-info {
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.integrante-info:hover {
+    transform: translateY(-10px);
+}
+
+.integrante-info img {
+    width: 100%;
+    border-radius: 18px;
+    border: 3px solid #fa8072; /* Color Salmón */
+}
+
+.integrante-info h3 {
+    margin: 10px 0 5px;
+    color: #2c3e50; /*Color Azul Marino */
+}
+
+.integrante-info p {
+    color: #650;
+}
+
+.seccion-frase {
+    background-image: url('../img/fondo7.jpg');
+    margin: auto;
+    padding: 50px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 13px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+.frase-contenedor h2 {
+    font-size: 48px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.seccion-resenias {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    padding: 50px 0;
+}
+
+.contenedor-resenias {
+    display: flex;
+    width: 160%;
+    animation: scroll 180s linear infinite;
+}
+
+.resenia {
+    flex: 1 0 17%; /* alinear las 6 reviews en una fila... creo */
+    max-width: 17%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.resenia p {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #666;
+}
+
+.resenia h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.estrellas {
+    margin-top: 10px;
+    color: #fa8072;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
