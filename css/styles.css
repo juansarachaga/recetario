@@ -322,6 +322,30 @@ button[type="submit"]:hover {
     100% { transform: translateX(-50%); }
 }
 
+.aviso-legal {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.aviso-legal p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.aviso-legal a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.aviso-legal a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 360px) and (max-width: 767px) {
     .contenedor {
         flex-direction: column;
