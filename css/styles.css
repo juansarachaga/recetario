@@ -254,6 +254,10 @@ button[type="submit"]:hover {
 
 .seccion-frase {
     background-image: url('../img/fondo7.jpg');
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
     margin: auto;
     padding: 50px;
     width: 100%;
@@ -261,6 +265,10 @@ button[type="submit"]:hover {
     box-shadow: 0 0 13px rgba(0,0,0,0.2);
     border-radius: 10px;
     text-align: center;
+}
+
+.seccion-frase h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
 }
 
 .frase-contenedor h2 {
