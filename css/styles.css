@@ -342,6 +342,42 @@ button[type="submit"]:hover {
     .contenedor2 img{
         max-width: 80%!important;
     }
+
+    .textoInvitacion {
+        text-align: center;
+        color: #333;
+        margin: 20px;
+        
+    }
+
+    .integrante-info {
+        display: inline-block;
+        width: 100%;
+        margin: 1%;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .contenedor-resenias {
+        flex-direction: column;
+        width: 100%;
+        animation: none; 
+    }
+
+    .resenia {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    .seccion-resenias {
+        overflow: hidden;
+        padding: 20px;
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -415,8 +451,8 @@ button[type="submit"]:hover {
     .textoInvitacion {
         text-align: center;
         color: #333;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px;
+        
     }
 
     .contenedor.message {
@@ -426,4 +462,6 @@ button[type="submit"]:hover {
     .contenedor2.separador {
         display: inline-block;
     }
+
+  
 }
