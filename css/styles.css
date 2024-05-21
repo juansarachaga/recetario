@@ -1,6 +1,6 @@
-body{
+body {
     padding: 0;
-    margin: 0;  
+    margin: 0;
     background-color: azure;
 }
 
@@ -13,41 +13,35 @@ body{
 .arrow-up {
     cursor: pointer;
 }
-#navbarNav{
-    a{
-        font-size: 30px;
-    }
+
+#navbarNav a {
+    font-size: 30px;
 }
+
+.headerImage, .headerImage2, .headerImage3, .headerImage4 {
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 400px!important;
+}
+
 .headerImage {
     background-image: url('../img/fondo.jpg')!important;
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 400px!important; 
 }
+
 .headerImage2 {
     background-image: url('../img/fondo3.jpg')!important;
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 400px!important; 
 }
+
 .headerImage3 {
     background-image: url('../img/fondo4.jpg')!important;
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 400px!important; 
 }
 
 .headerImage4 {
     background-image: url('../img/fondo5.jpg')!important;
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 400px!important; 
 }
-.separador{
+
+.separador {
     width: 100%;
     background-color: #dcdcdc;
 }
@@ -59,10 +53,10 @@ body{
 }
 
 .separador2 h2 {
-  color: #333;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .sectionWithBackground {
@@ -76,9 +70,7 @@ body{
     margin: 0;
     text-align: left;
     z-index: 2;
-    opacity: 0.9; 
-   
-    
+    opacity: 0.9;
 }
 
 .sectionWithBackground h2 {
@@ -86,7 +78,6 @@ body{
     text-align: left;
     margin-bottom: 20px;
     color: #fff;
-    padding-left: 10px;
     padding: 10px 0 0 10px;
     opacity: 1;
 }
@@ -98,8 +89,8 @@ body{
     padding: 10px 0 0 10px;
     z-index: 2;
     opacity: 1;
-    
 }
+
 .sectionWithBackground li {
     text-align: left;
 }
@@ -109,7 +100,6 @@ body{
     background-size: contain;
     height: 255px;
     width: 100% !important;
-    /* background-position: center; */
     background-repeat: repeat-x;
     color: #fff;
     padding: 0;
@@ -117,15 +107,16 @@ body{
     text-align: left;
     margin-top: -20px!important;
     z-index: 1;
-    opacity: 0.9; 
-  }
-  
-  .contenedor {
+    opacity: 0.9;
+}
+
+.contenedor {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
 }
+
 .contenedor .contenido {
     width: 55%;
     padding: 20px;
@@ -136,13 +127,13 @@ body{
 }
 
 .contenido p {
-  color: #666;
-  font-size: 18px;
-  line-height: 1.6;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .contenido strong {
-  color: #e74c3c;
+    color: #e74c3c;
 }
 
 .imagen img {
@@ -152,154 +143,26 @@ body{
 
 .contenedor2 {
     text-align: center;
-    /* background-color: #f9f9f9; */
     padding: 40px;
 }
 
 .contenedor2 img {
-  max-width: 400px;
+    max-width: 400px;
 }
 
-/* Animación del botón */
+.animacionBoton {
+    animation: animacionBoton 1s ease forwards;
+}
+
 @keyframes animacionBoton {
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
 
-.animacionBoton {
-    animation: animacionBoton 1s ease forwards; 
-}
-
-/* estilos del dropdown */
-
-@media screen and (min-width: 360px) and (max-width: 767px) {
-    .contenedor {
-        flex-direction: column;
-        padding: 20px;
-        background: #FFF6D5;
-    }
-
-    .invitacion {
-        justify-content: center;
-        display: flex;
-    }
-
-    .texto {
-        justify-content: center;
-        display: flex;
-    }
-
-    .dropdown-menu {
-        position: relative;
-    }
-
-    .contenedor2.separador {
-        display: inline-block;
-    }
-
-}
-
-.noMePisan{
+.noMePisan {
     z-index: 9999999!important;
 }
 
-@media screen and (min-width: 768px) {
-
-    .contenedor {
-        flex-direction: row;
-        padding: 20px;
-        background: #FFF6D5;
-    }
-.dropdown-menu {
-    padding: 20px;
-    max-width: 70%;
-    background-color: #e1e0e0f5;
-    color: #333;
-    border: 1px solid #b0a9a9;
-    border-radius: 5px;
-}
-
-.dropdown-menu h5 {
-    font-size: 1.5rem;
-    margin-top: 0;
-}
-
-.dropdown-menu p,
-.dropdown-menu ul,
-.dropdown-menu li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.dropdown-menu ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.dropdown-menu ul li {
-    margin-left: 20px;
-}
-
-.botonReceta {
-    display: flex;
-    justify-content: center; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.ancho40, .ancho60 {
-    display: inline-block;
-    vertical-align: top; /* Alinea los elementos en la parte superior */
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto */
-}
-
-.ancho40 {
-    width: 40%;
-}
-
-.ancho60 {
-    width: 55%;
-}
-
-.invitacion {
-    text-align: center;
-    color: #333;
-    font-size: 34px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.textoInvitacion {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-    .texto {
-        justify-content: center;
-        display: flex;
-    }
-
-    .dropdown-menu {
-        position: relative;
-    }
-
-    .contenedor.message {
-        flex-direction: row;
-    }
-
-    .contenedor2.separador {
-        display: inline-block;
-    }
-
-    /*.m-0 {
-        display: inline-block;
-    }*/
-
-}
 .texto {
     font-size: 28px;
     line-height: 1.6;
@@ -348,17 +211,15 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* estilos de la pg. Nosotros */
-
 .seccion-equipo {
     text-align: center;
     padding: 50px;
-    background-color: #e8e8e8; /* Gris Claro */
+    background-color: #e8e8e8;
 }
 
 .seccion-equipo h2 {
     margin-bottom: 40px;
-    color: #2c3e50; /* Azul Marino */
+    color: #2c3e50;
 }
 
 .integrante-info {
@@ -379,12 +240,12 @@ button[type="submit"]:hover {
 .integrante-info img {
     width: 100%;
     border-radius: 18px;
-    border: 3px solid #fa8072; /* Color Salmón */
+    border: 3px solid #fa8072;
 }
 
 .integrante-info h3 {
     margin: 10px 0 5px;
-    color: #2c3e50; /*Color Azul Marino */
+    color: #2c3e50;
 }
 
 .integrante-info p {
@@ -401,6 +262,7 @@ button[type="submit"]:hover {
     border-radius: 10px;
     text-align: center;
 }
+
 .frase-contenedor h2 {
     font-size: 48px;
     color: #ffffff;
@@ -422,7 +284,7 @@ button[type="submit"]:hover {
 }
 
 .resenia {
-    flex: 1 0 17%; /* alinear las 6 reviews en una fila... creo */
+    flex: 1 0 17%;
     max-width: 17%;
     box-sizing: border-box;
     padding: 20px;
@@ -450,4 +312,118 @@ button[type="submit"]:hover {
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .contenedor {
+        flex-direction: column;
+        padding: 20px;
+        background: #FFF6D5;
+    }
+
+    .invitacion, .texto {
+        justify-content: center;
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+
+    .contenedor2.separador {
+        display: inline-block;
+    }
+
+    .contenedor .contenido {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contenedor2 img{
+        max-width: 80%!important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+        padding: 20px;
+        background: #FFF6D5;
+    }
+
+    .dropdown-menu {
+        padding: 20px;
+        max-width: 70%;
+        background-color: #e1e0e0f5;
+        color: #333;
+        border: 1px solid #b0a9a9;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .dropdown-menu h5 {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .dropdown-menu p,
+    .dropdown-menu ul,
+    .dropdown-menu li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .dropdown-menu ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .dropdown-menu ul li {
+        margin-left: 20px;
+    }
+
+    .botonReceta {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ancho40, .ancho60 {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+
+    .ancho40 {
+        width: 40%;
+    }
+
+    .ancho60 {
+        width: 55%;
+    }
+
+    .invitacion {
+        text-align: center;
+        color: #333;
+        font-size: 34px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .textoInvitacion {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contenedor.message {
+        flex-direction: row;
+    }
+
+    .contenedor2.separador {
+        display: inline-block;
+    }
 }
