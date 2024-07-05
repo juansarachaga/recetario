@@ -1,0 +1,13 @@
+<body>
+    <h1>Comentarios</h1>
+    <form method="POST" action="/agregar_comentario">
+        <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+        <textarea name="comentario" placeholder="Escribe tu comentario" required></textarea>
+        <button type="submit">Agregar Comentario</button>
+    </form>
+    <ul>
+        {% for comentario in comentarios %}
+        <li>{{ comentario.nombre }}: {{ comentario.texto }}</li>
+        {% endfor %}
+    </ul>
+</body>
