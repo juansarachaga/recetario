@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var btnAcocinar = document.getElementById("btnAcocinar");
-
     // Función para verificar si el botón está visible en la ventana
-    function isButtonVisible() {
-        var rect = btnAcocinar.getBoundingClientRect();
+    function isButtonVisible(btn) {
+        if (!btn) return false;
+        var rect = btn.getBoundingClientRect();
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
@@ -13,48 +12,44 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Función para agregar la animación cuando el botón sea visible
-    function addButtonAnimation() {
-        if (isButtonVisible()) {
-            btnAcocinar.classList.add("animacionBoton");
-            window.removeEventListener("scroll", addButtonAnimation); // Elimina el listener una vez que se activa la animación
+    function addButtonAnimation(btn) {
+        if (isButtonVisible(btn)) {
+            btn.classList.add("animacionBoton");
+            window.removeEventListener("scroll", function() { addButtonAnimation(btn); }); // Elimina el listener una vez que se activa la animación
         }
     }
 
     // Agrega un listener para activar la animación cuando se hace scroll
-    window.addEventListener("scroll", addButtonAnimation);
-
-    // Agrega un listener para activar la animación si el botón ya es visible cuando la página se carga
-    addButtonAnimation();
+    var btnAcocinar = document.getElementById("btnAcocinar");
+    if (btnAcocinar) {
+        window.addEventListener("scroll", function() { addButtonAnimation(btnAcocinar); });
+        addButtonAnimation(btnAcocinar); // Activar animación si el botón es visible al cargar la página
+    }
 
     // Función para manejar el evento click del botón
     function handleClick(event) {
         event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        // Agrega aquí lo que quieras que haga el botón al hacer clic
         console.log("¡Hiciste clic en el botón!");
-        // Por ejemplo, puedes redirigir a otra página
         setTimeout(function() {
-            window.location.href = btnAcocinar.getAttribute("href");
+            window.location.href = event.target.getAttribute("href");
         }, 1000); // Redirige después de cierto tiempo (aquí 1 segundo)
     }
 
-    // Agrega el evento click al botón
-    btnAcocinar.addEventListener("click", handleClick);
-});
+    // Agrega el evento click al botón si existe
+    if (btnAcocinar) {
+        btnAcocinar.addEventListener("click", handleClick);
+    }
 
-
-document.addEventListener("DOMContentLoaded", function() {
+    // Manejo de los menús desplegables
     var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-    // Función para manejar el evento click del botón
-    function handleClick(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        var dropdownMenu = this.nextElementSibling; // Obtiene el menú desplegable asociado al botón clickeado
+    function handleClickDropdown(event) {
+        event.preventDefault();
+        var dropdownMenu = this.nextElementSibling;
 
-        // Alternar la visibilidad del menú desplegable
         if (dropdownMenu.classList.contains('show')) {
             dropdownMenu.classList.remove('show');
         } else {
-            // Ocultar todos los menús desplegables antes de mostrar el menú clickeado
             var allDropdownMenus = document.querySelectorAll('.dropdown-menu');
             allDropdownMenus.forEach(function(menu) {
                 menu.classList.remove('show');
@@ -63,12 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Agrega el evento click a todos los botones de dropdown
     dropdownToggles.forEach(function(button) {
-        button.addEventListener('click', handleClick);
+        button.addEventListener('click', handleClickDropdown);
     });
 
-    // Cierra el menú desplegable si se hace clic fuera de él
+    // Cerrar menú desplegable si se hace clic fuera de él
     window.addEventListener('click', function(event) {
         if (!event.target.matches('.dropdown-toggle')) {
             var dropdownMenus = document.querySelectorAll('.dropdown-menu');
@@ -79,9 +73,12 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
+    // Scroll to top button
+    var scrollTopButton = document.getElementById("scrollTopButton");
+    if (scrollTopButton) {
+        scrollTopButton.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
-
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}

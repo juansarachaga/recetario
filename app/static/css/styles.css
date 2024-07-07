@@ -497,3 +497,18 @@ button[type="submit"]:hover {
 
   
 }
+
+
+/* Estilo inicial para ocultar los dropdowns */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Mostrar el dropdown cuando tenga la clase 'show' */
+.dropdown-menu.show {
+    display: block;
+}
