@@ -1,46 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecetarioWeb</title>
-  
-    <link rel="icon" href="img/olla.png" type="image/png"> 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css"> 
-    <script src="js/scripts.js" defer></script>
-    <!-- <style>
+{% include 'defaults/head.html' %}
 
-    </style> -->
-</head>
 <body>
 
-    <header>
-        <div class="headerImage">
-            <!-- Aquí podrías agregar un menú de navegación utilizando Bootstrap -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="recetas.html">Recetas</a>
-                        </li><li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% include 'defaults/header.html'%}
 
     <main>
         <div class="contenedor2 separador">
@@ -67,11 +29,11 @@
                 
             </div>
             <div class="imagen">
-                <img src="img/promo.jpeg" alt="Promo" class="img-fluid">
+                <img src="{{url_for('static', filename='img/promo.jpeg')}}" alt="Promo" class="img-fluid">
             </div>
         </section>
 <div class="contenedor2">
-        <img src="img/olla.png" alt="Cocineros" class="img-fluid mt-3">
+        <img src="{{url_for('static', filename='img/olla.png')}}" alt="Cocineros" class="img-fluid mt-3">
 </div>
         <section class="sectionWithBackground">
             <h2>Por qué es recomendable saber cocinar</h2>
@@ -92,9 +54,9 @@
         <section class="contenedor2">
             <h2>Y AHORA QUE YA SABES QUIENES SOMOS Y A LO QUE VINIMOS</h2>
             <div>
-                <a href="recetas.html" class="btn btn-primary btn-lg" id="btnAcocinar">¡A COCINAR!</a>
+                <a href="/recetas" class="btn btn-primary btn-lg" id="btnAcocinar">¡A COCINAR!</a>
                 <br /> 
-                <img src="img/cocineros.png" alt="Cocineros" class="img-fluid mt-3">
+                <img src="{{url_for('static', filename='img/cocineros.png')}}" alt="Cocineros" class="img-fluid mt-3">
             </div>
         </section>
 
@@ -114,13 +76,8 @@
     </footer>
     
 
-    <!-- Bootstrap JS y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Puedes incluir aquí scripts de JavaScript personalizados -->
-    <script src="script.js"></script>
+    {% include 'defaults/footer.html'%}
+    {% include 'defaults/scriptsjs.html'%}
 
 </body>
 </html>

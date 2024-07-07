@@ -1,47 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecetarioWeb</title>
-  
-    <link rel="icon" href="img/olla.png" type="image/png"> 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css"> 
-    <script src="js/scripts.js" defer></script>
-    <!-- <style>
+{% include 'defaults/head.html' %}
 
-    </style> -->
-</head>
 <body>
 
-    <header>
-        <div class="headerImage2">
-            <!-- Aquí podrías agregar un menú de navegación utilizando Bootstrap -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="recetas.html">Recetas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% include 'defaults/header.html'%}
 
     <div class="contenedor2 separador">
         <h2>Quedate en RecetarioWeb para aprender a hacer estas Recetas</h2>
@@ -57,16 +18,16 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="img/pollo.jpg" alt="First slide">
+                <img class="d-block w-100" src="{{url_for('static', filename='img/pollo.jpg')}}" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/pasticho.jpg" alt="Second slide">
+                <img class="d-block w-100" src="{{url_for('static', filename='img/pasticho.jpg')}}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/suprema.jpg" alt="Third slide">
+                <img class="d-block w-100" src="{{url_for('static', filename='img/suprema.jpg')}}" alt="Third slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/guiso.jpg" alt="Fourth slide">
+                <img class="d-block w-100" src="{{url_for('static', filename='img/guiso.jpg')}}" alt="Fourth slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -106,7 +67,7 @@
             
         </div>
         <div class="imagen">
-            <img src="img/suprema.jpg" alt="Suprema Maryland" class="img-fluid">
+            <img src="{{url_for('static', filename='img/suprema.jpg')}}" alt="Suprema Maryland" class="img-fluid">
         </div>
     </section>
 
@@ -174,7 +135,7 @@
             
         </div>
         <div class="imagen">
-            <img src="img/pollo.jpg" alt="Suprema Maryland" class="img-fluid">
+            <img src="{{url_for('static', filename='img/pollo.jpg')}}" alt="Suprema Maryland" class="img-fluid">
         </div>
     </section>
 
@@ -229,7 +190,7 @@
             
         </div>
         <div class="imagen">
-            <img src="img/guiso.jpg" alt="Suprema Maryland" class="img-fluid">
+            <img src="{{url_for('static', filename='img/guiso.jpg')}}" alt="Suprema Maryland" class="img-fluid">
         </div>
     </section>
 
@@ -288,7 +249,7 @@
             
         </div>
         <div class="imagen">
-            <img src="img/pasticho.jpg" alt="Pasticho" class="img-fluid">
+            <img src="{{url_for('static', filename='img/pasticho.jpg')}}" alt="Pasticho" class="img-fluid">
         </div>
     </section>
 
@@ -327,24 +288,9 @@
         </div>
     </div>  
 </div>      
-<div class="aviso-legal">
-    <p>Este sitio web ha sido creado como parte de un proyecto académico para el curso de Codo a Codo full stack Python. No tiene fines comerciales. Agradecemos a <a href="https://www.paulinacocina.net/" target="_blank">Paulina Cocina</a> por la inspiración y por algunas imágenes, contenidos y recetas utilizados.</p>
-</div>
-<footer class="bg-dark text-white py-3 footerClass">
-    <div class="container d-flex justify-content-between align-items-center">
-        <p class="m-0">Recetario- © 2024 sin registro</p>
-        <div onclick="scrollToTop()" class="arrow-up">
-            <i class="fas fa-arrow-up"></i>
-        </div>
-    </div>
-</footer>
 
-
-    <!-- Bootstrap JS y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+{% include 'defaults/footer.html'%}
+{% include 'defaults/scriptsjs.html'%}
 
 </body>
 </html>
