@@ -1,21 +1,24 @@
 from flask import Flask, render_template
+from recetario import *
 
 app = Flask(__name__)
-unMenu = [("/", "Inicio"), ("/recetas", "Recetas"), ("/nosotros", "Nosotros"), ("/contacto", "Contacto")]
+unMenu = [("/", "Inicio"), ("/recetas/", "Recetas"), ("/nosotros/", "Nosotros"), ("/contacto/", "Contacto")]
+
+print(type(recetas_list[0]))
 
 @app.route("/")
 def cargarIndex():
     return render_template("index.html", unMenu=unMenu)
 
-@app.route("/recetas")
+@app.route("/recetas/")
 def cargarRecetas():
-    return render_template("recetas.html", unMenu=unMenu)
+    return render_template("recetas.html", unMenu=unMenu, recetas_list=recetas_list)
 
-@app.route("/nosotros")
+@app.route("/nosotros/")
 def cargarNosotros():
     return render_template("nosotros.html", unMenu=unMenu)
 
-@app.route("/contacto")
+@app.route("/contacto/")
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
 

@@ -2,7 +2,7 @@
 
 <body>
 
-    {% include 'defaults/header.html'%}
+    {% include 'defaults/header.html' %}
 
     <div class="contenedor2 separador">
         <h2>Quedate en RecetarioWeb para aprender a hacer estas Recetas</h2>
@@ -53,17 +53,12 @@
    <!-- RECETA N°1 --> 
 
     <div class="contenedor2 separador">
-        <h2>
-            Un plato abundante y sabroso para compartir: la suprema Maryland</h2>
+        <h2>{{recetas_list[0].titulo_largo}}</h2>
         </div>
     <section class="contenedor">
         <div class="contenido">
             
-            <p>
-                La suprema Maryland , también llamada suprema a la maryland o pechuga maryland, se cree que viene de EEUU y es lo más probable por su nombre aunque lo cierto es que es una comida que ya se hizo popular en todo el mundo. Debido a eso, vamos a encontrar recetas muy variadas y una cantidad que les juro que marea. 
-
-                Así que lo mejor es tener en cuenta la base que le da su identidad a la suprema Maryland y a partir de eso experimentar hasta encontrar lo que a cada uno le guste. Y a eso precisamente apunta la receta que les vamos a brindar.
-            </p>
+            <p>{{recetas_list[0].resumen}}</p>
             
         </div>
         <div class="imagen">
@@ -73,11 +68,11 @@
 
     <div class="container mt-5">
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton1">Receta de Suprema Maryland</button>
+            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton1">Receta de Pollo a la brasa</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <h5>Receta de suprema maryland</h5>
-                <p><strong>Rinde:</strong> 4 porciones</p>
-                <p><strong>Tiempo de preparación:</strong> 1 hora</p>
+                <h5>{{recetas_list[0].titulo}}</h5>
+                <p><strong>Rinde:</strong> {{recetas_list[0].rinde}} porciones</p>
+                <p><strong>Tiempo de preparación:</strong> {{recetas_list[0].tiempo_min}} minutos</p>
                 <h6>Ingredientes</h6>
                 <ul>
                     <li>4 pechugas de pollo</li>
@@ -113,6 +108,7 @@
                 <p>Pelar las bananas, pasarlas por el huevo batido y luego pan rallado. Freírlas en abundante aceite caliente. Retirar y colocar sobre papel absorbente.</p>
                 <p>Servir caliente las supremas con la salsa y las bananas fritas en el mismo plato. Se pueden acompañar con huevos fritos y papas pay.</p>
             </div>
+            
         </div>
     </div>
 
@@ -289,8 +285,8 @@
     </div>  
 </div>      
 
-{% include 'defaults/footer.html'%}
-{% include 'defaults/scriptsjs.html'%}
+{% include 'defaults/footer.html' %}
+<!-- {% include 'defaults/scriptsjs.html' %} -->
 
 </body>
 </html>
