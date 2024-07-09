@@ -3,7 +3,8 @@ recetas_list = [
 		"idreceta": 1,
 		"titulo_largo": "Un plato abundante y sabroso para compartir: la suprema Maryland",
 		"resumen": "La suprema Maryland , también llamada suprema a la maryland o pechuga maryland, se cree que viene de EEUU y es lo más probable por su nombre aunque lo cierto es que es una comida que ya se hizo popular en todo el mundo. Debido a eso, vamos a encontrar recetas muy variadas y una cantidad que les juro que marea. Así que lo mejor es tener en cuenta la base que le da su identidad a la suprema Maryland y a partir de eso experimentar hasta encontrar lo que a cada uno le guste. Y a eso precisamente apunta la receta que les vamos a brindar.",
-		"titulo": "Receta de suprema maryland",
+		"imagen": "/static/img/suprema.jpg",
+		"titulo": "Suprema Maryland",
 		"rinde": 4,
 		"tiempo_min": 60,
 		"ingredientes": [
@@ -41,7 +42,8 @@ recetas_list = [
 		"idreceta": 2,
 		"titulo_largo": "La mejor receta de pollo a la brasa para hacer en casa y tres opciones para usar lo que te sobre",
 		"resumen": "Creo que en la gastronomía es donde más se puede ver la conexión de la humanidad más allá de las distancias, climas, flora y fauna. Quizás nos estemos poniendo filosóficos pero realmente si uno lo piensa hay recetas que se repiten en el mundo en lugares muy distantes. Y es que siempre como especie buscamos cocinar alimentos para que sean más seguros para nuestro organismo entre otras cosas. Tal es así que el pollo a la brasa se hace en todo el mundo pero la receta peruana le dio un toque absolutamente distintivo. Aunque la receta original se ha mantenido como un secreto bien guardado, al final dejamos una receta diseñada para hacer en casa. No importa que no tengas el sistema rotatorio de un restaurante, nosotros desde acá te damos ánimos así que ve por ese delicioso pollito.",
-		"titulo": "Receta de pollo a la brasa peruano",
+		"imagen": "/static/img/pollo.jpg",
+		"titulo": "Pollo a la brasa peruano",
 		"rinde": 6,
 		"tiempo_min": 300,
 		"ingredientes": [
@@ -68,7 +70,8 @@ recetas_list = [
 		"idreceta": 3,
 		"titulo_largo": "Un guiso muy rico y con sabor a mar para el frío: el chupe de camarones",
 		"resumen": "Bienvenidos estimados y estimadas a este lugar de encuentro donde hablamos principalmente de comida pero también de otras cosas. Hoy quiero saber que opinan sobre los guisados y este mito que dice que son “pesados”. Muchas veces escuchamos que son comidas de época invernal pero sin duda nos hemos comido unos ricos guisos en pleno verano con 40 grados a la sombra (bueno, quizás no tanto). Y se me ocurrió que si el guiso lleva frutos de mar puede ser un poco más liviano si hace calor ¿qué creen? El chupe de camarones sería una excelente opción para comenzar a probar mi teoría. Lo pueden acompañar con una bebida fresquita porque tampoco la idea es inmolarnos por la causa. Para esto les dejamos una receta fácil y encantadora, después nos cuentan.",
-		"titulo": "Receta de chupe de camarones",
+		"imagen": "/static/img/guiso.jpg",
+		"titulo": "Chupe de camarones",
 		"rinde": 4,
 		"tiempo_min": 45,
 		"ingredientes": [
@@ -101,7 +104,8 @@ recetas_list = [
 		"idreceta": 4,
 		"titulo_largo": "Capas y capas de sabor: les presento al pasticho",
 		"resumen": "¡Buonasera queridos! Si estás con ganas de cenar algo rico o estás pensando qué cocinar para la juntada familiar, esta receta te viene como caída del cielo. Te contamos todo sobre el pasticho, te damos una receta increíble y hasta la mejor forma de hacerlo para ensuciar poco la cocina y encima poder trasladarlo. Si te parece muy similar a la lasaña es porque lo es. De hecho su nombre viene del idioma italiano ¡Uy estoy spoileando un montón! Es que me gana el entusiasmo por una receta venezolana e italiana al mismo tiempo. Pero a no confundir, esto no es tampoco una receta de lasaña estilo italiano sino una adaptación venezolana a este plato emblemático. Ahora sí, los invito a leer y al final comentarnos si van a hacer esta receta.",
-		"titulo": "Receta de pasticho",
+		"imagen": "/static/img/pasticho.jpg",
+		"titulo": "Pasticho",
 		"rinde": 8,
 		"tiempo_min": 120,
 		"ingredientes": [

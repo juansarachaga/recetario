@@ -4,8 +4,6 @@ from recetario import *
 app = Flask(__name__)
 unMenu = [("/", "Inicio"), ("/recetas/", "Recetas"), ("/nosotros/", "Nosotros"), ("/contacto/", "Contacto")]
 
-print(type(recetas_list[0]))
-
 @app.route("/")
 def cargarIndex():
     return render_template("index.html", unMenu=unMenu)

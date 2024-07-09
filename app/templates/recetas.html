@@ -50,243 +50,48 @@
         </div>
     </section>
 
-   <!-- RECETA N°1 --> 
+   <!-- RECETAS --> 
+   {% for item in recetas_list %}
 
     <div class="contenedor2 separador">
-        <h2>{{recetas_list[0].titulo_largo}}</h2>
+        <h2>{{item.titulo_largo}}</h2>
         </div>
     <section class="contenedor">
         <div class="contenido">
             
-            <p>{{recetas_list[0].resumen}}</p>
+            <p>{{item.resumen}}</p>
             
         </div>
         <div class="imagen">
-            <img src="{{url_for('static', filename='img/suprema.jpg')}}" alt="Suprema Maryland" class="img-fluid">
+            <img src="{{item.imagen}}" alt="{{item.titulo}}" class="img-fluid">
         </div>
     </section>
 
     <div class="container mt-5">
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton1">Receta de Pollo a la brasa</button>
+            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton1">Receta de {{item.titulo}}</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <h5>{{recetas_list[0].titulo}}</h5>
-                <p><strong>Rinde:</strong> {{recetas_list[0].rinde}} porciones</p>
-                <p><strong>Tiempo de preparación:</strong> {{recetas_list[0].tiempo_min}} minutos</p>
+                <h5>Receta de {{item.titulo}}</h5>
+                <p><strong>Rinde:</strong> {{item.rinde}} porciones</p>
+                <p><strong>Tiempo de preparación:</strong> {{item.tiempo_min}} minutos</p>
                 <h6>Ingredientes</h6>
                 <ul>
-                    <li>4 pechugas de pollo</li>
-                    <li>1 taza de pan rallado</li>
-                    <li>1/2 taza de harina</li>
-                    <li>2 huevos batidos</li>
-                    <li>1 taza de leche</li>
-                    <li>Sal y pimienta a gusto</li>
-                    <li>Aceite vegetal para freír</li>
-                    <li><strong>Para la salsa:</strong>
-                    <ul>
-                        <li>1/4 taza de mantequilla</li>
-                        <li>1/4 taza de harina</li>
-                        <li>2 tazas de leche</li>
-                        <li>Sal y pimienta a gusto</li>
-                        <li>3 choclos amarillos desgranados</li>
-                    </ul>
-                    </li>
-                    <li><strong>Para las bananas fritas:</strong>
-                    <ul>
-                        <li>4 bananas</li>
-                        <li>2 huevos</li>
-                        <li>1/2 taza de pan rallado</li>
-                        <li>Aceite, para freír</li>
-                    </ul>
-                    </li>
+                    {% for item in item.get("ingredientes") %}
+                    <li>{{item}}</li>
+                    {% endfor %}
                 </ul>
-                <h6>Cómo hacer suprema maryland de la manera más sencilla</h6>
-                <p>Salpimentar a gusto las pechugas de pollo. Preparar tres platos hondos: uno con harina, otro con huevo batido y el tercero con pan rallado.</p>
-                <p>Pasar cada pechuga por harina, luego por huevo y finalmente por pan rallado, cubriendo uniformemente.</p>
-                <p>Calentar suficiente aceite en una sartén a fuego medio. Freír 5-6 minutos por cada lado hasta que estén doradas y cocidas.</p>
-                <p>En una cacerola derretir la mantequilla, añadir la harina y revolver hasta formar una pasta. Verter la leche, revolviendo hasta que espese. Agregar el choclo procesado y cocinar 5 minutos.</p>
-                <p>Pelar las bananas, pasarlas por el huevo batido y luego pan rallado. Freírlas en abundante aceite caliente. Retirar y colocar sobre papel absorbente.</p>
-                <p>Servir caliente las supremas con la salsa y las bananas fritas en el mismo plato. Se pueden acompañar con huevos fritos y papas pay.</p>
+                <h6>Proceso</h6>
+                {% for item in item.get("proceso") %}
+                <p>{{item}}</p>
+                {% endfor %}
+
             </div>
             
         </div>
     </div>
-
-   <!-- RECETA N°2 --> 
-
-    <div class="contenedor2 separador">
-        <h2>
-            La mejor receta de pollo a la brasa para hacer en casa y tres opciones para usar lo que te sobre</h2>
-        </div>
-    <section class="contenedor">
-        <div class="contenido">
-            
-            <p>
-                Creo que en la gastronomía es donde más se puede ver la conexión de la humanidad más allá de las distancias, climas, flora y fauna. Quizás nos estemos poniendo filosóficos pero realmente si uno lo piensa hay recetas que se repiten en el mundo en lugares muy distantes.
-
-                Y es que siempre como especie buscamos cocinar alimentos para que sean más seguros para nuestro organismo entre otras cosas. Tal es así que el pollo a la brasa se hace en todo el mundo pero la receta peruana le dio un toque absolutamente distintivo.
-                
-                Aunque la receta original se ha mantenido como un secreto bien guardado, al final dejamos una receta diseñada para hacer en casa. No importa que no tengas el sistema rotatorio de un restaurante, nosotros desde acá te damos ánimos así que ve por ese delicioso pollito.
-            </p>
-            
-        </div>
-        <div class="imagen">
-            <img src="{{url_for('static', filename='img/pollo.jpg')}}" alt="Suprema Maryland" class="img-fluid">
-        </div>
-    </section>
-
-    <div class="container mt-5">
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton2">Receta de Pollo a la brasa</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                <h5>Receta de pollo a la brasa peruano</h5>
-                <p><strong>Rinde:</strong> 6 porciones</p>
-                <p><strong>Tiempo de preparación:</strong> 5 horas</p>
-                <h6>Ingredientes</h6>
-                <ul>
-                    <li>1 pollo entero (aproximadamente 2 kg)</li>
-                    <li></strong>Para la Marinada:</strong>
-                        <ul>
-                            <li>4 dientes de ajo picados</li>
-                            <li>2 cucharadas de pasta de ají panca (o ají amarillo)</li>
-                            <li>2 cucharadas de vinagre de manzana</li>
-                            <li>2 cucharaditas de comino molido</li>
-                            <li>1 cucharadita de pimienta negra</li>
-                            <li>1 cucharadita de paprika</li>
-                            <li>Sal a gusto</li>
-                            <li>2 cucharadas de aceite vegetal</li>
-                        </ul>
-                    </li>
-                </ul>
-                <h6>Paso a paso y girando se hace el pollo a la brasa</h6>
-                <p>Lavar, secar bien y realizar cortes profundos al pollo. En un bol mezclar todos los ingredientes de la marinada hasta obtener una pasta homogénea.</p>
-                <p>Cubrir bien todo el pollo con la marinada. Cubrirlo y dejar marinar en el refrigerador al menos 4 horas. Precalentar parrilla u horno a temperatura alta.</p>
-                <p>Cocinar el pollo a la brasa, girando ocasionalmente para asegurar una cocción uniforme, durante aproximadamente 1 hora. Ir chequeando la cocción en la carne.</p>
-                <p>Servir el pollo a la brasa peruano con la guarnición clásica elegida como papas fritas y ensalada.</p>
-            </div>
-            
-        </div>
-    </div>
-   
-    <!-- RECETA N°3 --> 
-
-    <div class="contenedor2 separador">
-        <h2>Un guiso muy rico y con sabor a mar para el frío: el chupe de camarones</h2>
-    </div>
-    <section class="contenedor">
-        <div class="contenido">
-            
-            <p>
-                Bienvenidos estimados y estimadas a este lugar de encuentro donde hablamos principalmente de comida pero también de otras cosas. Hoy quiero saber que opinan sobre los guisados y este mito que dice que son “pesados”.
-
-                Muchas veces escuchamos que son comidas de época invernal pero sin duda nos hemos comido unos ricos guisos en pleno verano con 40 grados a la sombra (bueno, quizás no tanto). Y se me ocurrió que si el guiso lleva frutos de mar puede ser un poco más liviano si hace calor ¿qué creen?
-                
-                El chupe de camarones sería una excelente opción para comenzar a probar mi teoría. Lo pueden acompañar con una bebida fresquita porque tampoco la idea es inmolarnos por la causa. Para esto les dejamos una receta fácil y encantadora, después nos cuentan.
-            </p>
-            
-        </div>
-        <div class="imagen">
-            <img src="{{url_for('static', filename='img/guiso.jpg')}}" alt="Suprema Maryland" class="img-fluid">
-        </div>
-    </section>
-
-    <div class="container mt-5">
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton3">Receta de chupe de camarones</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                <h5>Receta de chupe de camarones</h5>
-                <p><strong>Rinde:</strong> 4 porciones</p>
-                <p><strong>Tiempo de preparación:</strong> 45 minutos</p>
-                <h6>Ingredientes</h6>
-                <ul>
-                    <li>500 g de camarones, pelados y limpios</li>
-                    <li>2 tazas de caldo de pescado o de camarones</li>
-                    <li>1 cebolla, picada finamente</li>
-                    <li>3 dientes de ajo, picados</li>
-                    <li>2 zanahorias, cortadas en rodajas</li>
-                    <li>2 papas, peladas y cortadas en cubos</li>
-                    <li>1 taza de choclo (maíz) desgranado</li>
-                    <li>1 taza de arvejas</li>
-                    <li>1 taza de leche evaporada</li>
-                    <li>1 taza de queso fresco, desmenuzado</li>
-                    <li>2 huevos</li>
-                    <li>1/4 de taza de arroz</li>
-                    <li>Aceite de oliva</li>
-                    <li>Sal y pimienta a gusto</li>
-                    <li>Perejil fresco picado</li>
-                </ul>
-                <h6>5 pasos para un chupe de camarones increíble</h6>
-                <p></p>En una olla sofreír la cebolla y el ajo en un poco de aceite de oliva hasta que estén dorados. Agregar las zanahorias, papas y choclo, y cocinar por unos minutos.</p>
-                <p>Verter el caldo de pescado o camarones en la olla, cuando llegue a ebullición, agregar el arroz y cocinar hasta que esté tierno.</p>
-                <p>Incorporar los camarones, arvejas y leche evaporada, cocinar a fuego medio hasta que los camarones se cocinen. Agregar el queso fresco revolviendo hasta que se derrita.</p>
-                <p>En otro bol batir los huevos y agregarles un poco de la sopa caliente revolviendo constantemente. Verter en la olla revolviendo para crear una consistencia más espesa.</p>
-                <p>Salpimentar a gusto. Cocinar a fuego lento unos minutos hasta que la sopa espese ligeramente. Servir caliente, espolvoreando perejil fresco picado por encima.</p>
-            </div>
-            
-        </div>
-    </div>
-   
-     <!-- RECETA N°4 --> 
-
-     <div class="contenedor2 separador">
-        <h2>
-            Capas y capas de sabor: les presento al pasticho</h2>
-        </div>
-    <section class="contenedor">
-        <div class="contenido">
-            
-            <p>
-                ¡Buonasera queridos! Si estás con ganas de cenar algo rico o estás pensando qué cocinar para la juntada familiar, esta receta te viene como caída del cielo. Te contamos todo sobre el pasticho, te damos una receta increíble y hasta la mejor forma de hacerlo para ensuciar poco la cocina y encima poder trasladarlo.
-
-                Si te parece muy similar a la lasaña es porque lo es. De hecho su nombre viene del idioma italiano ¡Uy estoy spoileando un montón! Es que me gana el entusiasmo por una receta venezolana e italiana al mismo tiempo.
-                
-                Pero a no confundir, esto no es tampoco una receta de lasaña estilo italiano sino una adaptación venezolana a este plato emblemático. Ahora sí, los invito a leer y al final comentarnos si van a hacer esta receta.
-            </p>
-            
-        </div>
-        <div class="imagen">
-            <img src="{{url_for('static', filename='img/pasticho.jpg')}}" alt="Pasticho" class="img-fluid">
-        </div>
-    </section>
-
-    <div class="container mt-5">
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton4">Receta de pasticho</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                <h5>Receta de pasticho</h5>
-            <p><strong>Rinde:</strong> 8 porciones</p>
-            <p><strong>Tiempo de preparación:</strong> 2 horas</p>
-            <h6>Ingredientes</h6>
-            <ul>
-                <li>Láminas de lasaña pre-cocidas o con masa para lasaña casera</li>
-                <li>500 gr de carne molida de res</li>
-                <li>1 cebolla picada</li>
-                <li>2 dientes de ajo, picados</li>
-                <li>400 gr de tomate triturado</li>
-                <li>1 cucharadita de orégano</li>
-                <li>1 cucharadita de albahaca</li>
-                <li>Sal y pimienta a gusto</li>
-                <li>Aceite de oliva para cocinar</li>
-                <li>Queso rallado (tipo amarillo o mozzarella) para gratinar</li>
-            </ul>
-            <h6>Salsa Bechamel:</h6>
-            <ul>
-                <li>4 cucharadas de mantequilla</li>
-                <li>4 cucharadas de harina</li>
-                <li>4 tazas de leche</li>
-                <li>Sal, pimienta y nuez moscada a gusto</li>
-            </ul>
-            <h6>Paso a paso terminando con el armado</h6>
-            <p>En una sartén calentar un poco de aceite de oliva y sofreír la cebolla y el ajo. Agregar la carne molida y cuando se dore añadir el tomate triturado, el orégano, la albahaca, la sal y la pimienta. Cocinar a fuego medio hasta que espese.</p>
-            <p>En una cacerola derretir la mantequilla a fuego medio, agregar la harina y mezclar hasta formar una pasta. Verter la leche revolviendo para evitar grumos y cocinar hasta que la salsa espese. Condimentar con sal, pimienta y nuez moscada a gusto.</p>
-            <p>Precalentar el horno a 180°C. En un molde para horno hacer el montaje. Colocar una capa de láminas de lasaña, luego una capa de la mezcla de carne y una capa de salsa bechamel. Repetir hasta llenar el molde.</p>
-            <p>Espolvorear queso rallado sobre la capa superior. Hornear 30-40 minutos o hasta que esté dorado y burbujeante. Deja reposar durante unos minutos antes de cortar.</p>
-        </div>
-    </div>  
-</div>      
+    {% endfor %}
 
 {% include 'defaults/footer.html' %}
-<!-- {% include 'defaults/scriptsjs.html' %} -->
 
 </body>
 </html>
