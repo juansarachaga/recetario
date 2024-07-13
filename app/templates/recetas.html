@@ -49,45 +49,38 @@
             <p class="texto">Descubre deliciosas opciones para cocinar en casa y sorprender a tus seres queridos con platos exquisitos y fáciles de preparar.</p>
         </div>
     </section>
-
    <!-- RECETAS --> 
    {% for item in recetas_list %}
 
     <div class="contenedor2 separador">
-        <h2>{{item.titulo_largo}}</h2>
+        <h2>{{item[1]}}</h2>
         </div>
     <section class="contenedor">
         <div class="contenido">
             
-            <p>{{item.resumen}}</p>
+            <p>{{item[2]}}</p>
             
         </div>
         <div class="imagen">
-            <img src="{{item.imagen}}" alt="{{item.titulo}}" class="img-fluid">
+            <img src="{{item[3]}}" alt="{{item[4]}}" class="img-fluid">
         </div>
     </section>
 
     <div class="container mt-5">
-        <!-- <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle botonReceta" id="dropdownMenuButton1">Receta de {{item.titulo}}</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1"> -->
-                <h5>Receta de {{item.titulo}}</h5>
-                <p><strong>Rinde:</strong> {{item.rinde}} porciones</p>
-                <p><strong>Tiempo de preparación:</strong> {{item.tiempo_min}} minutos</p>
+                <h5>Receta de {{item[4]}}</h5>
+                <p><strong>Rinde:</strong> {{item[5]}} porciones</p>
+                <p><strong>Tiempo de preparación:</strong> {{item[6]}} minutos</p>
                 <h6>Ingredientes</h6>
                 <ul>
-                    {% for item in item.get("ingredientes") %}
-                    <li>{{item}}</li>
-                    {% endfor %}
+                    {% for item2 in ingredientes_list %}
+                      {% if item2[0] == item[0] %}
+                        <li>{{item2[2]}}</li>
+                      {% endif %}
+                      {% endfor %}
                 </ul>
                 <h6>Proceso</h6>
-                {% for item in item.get("proceso") %}
-                <p>{{item}}</p>
-                {% endfor %}
+                <p>{{item[7]}}</p>
 
-            <!-- </div>
-            
-        </div> -->
     </div>
     {% endfor %}
 

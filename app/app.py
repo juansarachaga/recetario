@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-from recetario import *
+from flask import Flask, render_template, request, redirect
+from controller_db import *
 
 app = Flask(__name__)
 unMenu = [("/", "Inicio"), ("/recetas/", "Recetas"), ("/nosotros/", "Nosotros"), ("/contacto/", "Contacto")]
@@ -10,7 +10,9 @@ def cargarIndex():
 
 @app.route("/recetas/")
 def cargarRecetas():
-    return render_template("recetas.html", unMenu=unMenu, recetas_list=recetas_list)
+    recetas_list = getRecetas()
+    ingredientes_list = getIngredientes()
+    return render_template("recetas.html", unMenu=unMenu, recetas_list=recetas_list, ingredientes_list=ingredientes_list)
 
 @app.route("/nosotros/")
 def cargarNosotros():
