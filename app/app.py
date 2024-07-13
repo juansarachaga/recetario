@@ -22,3 +22,11 @@ def cargarNosotros():
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
 
+@app.route('/new_contacto', methods=['POST'])
+def new_contacto():
+    nombre = request.form['txtNombre']
+    email = request.form['txtEmail']
+    mensaje = request.form['txtMensaje']
+    newContacto(nombre=nombre, email=email, mensaje=mensaje)
+    return redirect("/")
+
