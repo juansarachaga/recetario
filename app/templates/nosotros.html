@@ -6,26 +6,13 @@
 
     <section class="seccion-equipo">
         <h2>Conoce a Nuestro Equipo</h2>
+        {% for item in nosotros_list %}
         <div class="integrante-info">
-            <img src="{{url_for('static', filename='img/integrante_imagen1.jpg')}}" alt="Integrante 1">
-            <h3>Luis Martínez</h3>
-            <p>Especialista en repostería. Su habilidad para combinar sabores y texturas lo convierte en el maestro de los postres del equipo.</p>
+            <img src="{{url_for('static', filename=item.imagen)}}" alt="{{item.nombre}}">
+            <h3>{{item.nombre}}</h3>
+            <p>{{item.resumen}}</p>
         </div>
-        <div class="integrante-info">
-            <img src="{{url_for('static', filename='img/integrante_imagen2.jpg')}}" alt="Integrante 2">
-            <h3>Carlos Pérez</h3>
-            <p>Experto en cocina tradicional. Su pasión por las recetas de antaño y su habilidad para modernizarlas lo hacen único.</p>
-        </div>
-        <div class="integrante-info">
-            <img src="{{url_for('static', filename='img/integrante_imagen3.jpg')}}" alt="Integrante 3">
-            <h3>Gregorio Fernandez</h3>
-            <p>10 años de experiencia en cocina internacional. Apasionada por la innovación culinaria y la creación de nuevos platos.</p>
-        </div>
-        <div class="integrante-info">
-            <img src="{{url_for('static', filename='img/integrante_imagen4.jpg')}}" alt="Integrante 4">
-            <h3>Raul Lombardi</h3>
-            <p>Nutricionista y chef. Combina su conocimiento en nutrición con la cocina saludable, creando platos equilibrados y deliciosos.</p>
-        </div>
+        {% endfor %}
     </section>
 
     <section class="seccion-frase">

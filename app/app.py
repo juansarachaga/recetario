@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from controller_db import *
+from nosotros import *
 
 app = Flask(__name__)
 unMenu = [("/", "Inicio"), ("/recetas/", "Recetas"), ("/nosotros/", "Nosotros"), ("/contacto/", "Contacto")]
@@ -16,7 +17,7 @@ def cargarRecetas():
 
 @app.route("/nosotros/")
 def cargarNosotros():
-    return render_template("nosotros.html", unMenu=unMenu)
+    return render_template("nosotros.html", unMenu=unMenu, nosotros_list=nosotros_list)
 
 @app.route("/contacto/")
 def cargarContacto():
