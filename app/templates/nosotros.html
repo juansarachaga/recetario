@@ -23,36 +23,13 @@
 
     <section class="seccion-resenias">
         <div class="contenedor-resenias">
+            {% for item in resenias_list %}
             <div class="resenia">
-                <h3>María Fernández</h3>
-                <p>"¡La mejor experiencia culinaria que he tenido! Los platos son exquisitos y el servicio impecable."</p>
-                <div class="estrellas">★★★★★</div>
+                <h3>{{item[1]}}</h3>
+                <p>{{item[3]}}</p>
+                <div class="estrellas">{{'*'*item[5]}}</div>
             </div>
-            <div class="resenia">
-                <h3>Jorge Rodríguez</h3>
-                <p>"Cada bocado es una explosión de sabores. Definitivamente regresaré con más amigos."</p>
-                <div class="estrellas">★★★★</div>
-            </div>
-            <div class="resenia">
-                <h3>Lucía Pérez</h3>
-                <p>"La atención al detalle en cada plato es impresionante. Un lugar obligado para los amantes de la buena comida."</p>
-                <div class="estrellas">★★★★</div>
-            </div>
-            <div class="resenia">
-                <h3>David González</h3>
-                <p>"¡Simplemente espectacular! La combinación de ingredientes frescos y técnicas modernas es insuperable."</p>
-                <div class="estrellas">★★★★★</div>
-            </div>
-            <div class="resenia">
-                <h3>Carmen Ruiz</h3>
-                <p>"Un verdadero deleite gastronómico. Los chefs son unos artistas y su pasión se refleja en cada plato."</p>
-                <div class="estrellas">★★★★★</div>
-            </div>
-            <div class="resenia">
-                <h3>Antonio López</h3>
-                <p>"Un ambiente acogedor y una comida que te hace sentir como en casa. Muy recomendado."</p>
-                <div class="estrellas">★★★★</div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 

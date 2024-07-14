@@ -100,6 +100,19 @@ def getContactoById(id):
     conexion.close()
     return result
 
+def getContactosResenias():
+    # conexion mysql
+    conexion = conectarMySQL()
+    result = []
+    with conexion.cursor() as cursor:
+        # Create a new record
+        sql = "SELECT * FROM contactos WHERE tipo='RESENIA' LIMIT 6"
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        conexion.commit()
+        conexion.close()
+        return result
+    
 # Create -> Insert
 def newContacto(nombre, email, mensaje):
     conexion = conectarMySQL()
