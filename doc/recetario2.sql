@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS `contactos` (
   `nombre` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `mensaje` varchar(180),
+  `tipo` varchar(10),
+  `estrellas` int,
   PRIMARY KEY (`idcontacto`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 );
@@ -39,6 +41,16 @@ CREATE TABLE `ingredientes` (
 --  KEY `idreceta_idx` (`idreceta`),
 --  CONSTRAINT `idreceta` FOREIGN KEY (`idreceta`) REFERENCES `recetas` (`idreceta`)
 
+
+-- INSERTS de Contactos
+INSERT INTO contactos VALUES (1, "Miguel Angel Gutierrez","ing.miguel.gutierrez@gmail.com","Me gustaría agreguen una receta con pescado de rio","",0);
+INSERT INTO contactos VALUES (2, "Juan Perez","juan.perez@gmail.com","Hice la suprema maryland, me salió bastante bien!","",0);
+INSERT INTO contactos VALUES (3, "María Fernández","maria.fer@gmail.com","¡La mejor experiencia culinaria que he tenido! Los platos son exquisitos y el servicio impecable.","RESENIA",5);
+INSERT INTO contactos VALUES (4, "Jorge Rodríguez","jorge.rod@gmail.com","Cada bocado es una explosión de sabores. Definitivamente regresaré con más amigos.","RESENIA",4);
+INSERT INTO contactos VALUES (5, "Lucía Pérez","lucia.perez@gmail.com","La atención al detalle en cada plato es impresionante. Un lugar obligado para los amantes de la buena comida.","RESENIA",4);
+INSERT INTO contactos VALUES (6, "David González","david.gon@gmail.com","¡Simplemente espectacular! La combinación de ingredientes frescos y técnicas modernas es insuperable.","RESENIA",5);
+INSERT INTO contactos VALUES (7, "Carmen Ruiz","carmen.ruiz@gmail.com","Un verdadero deleite gastronómico. Los chefs son unos artistas y su pasión se refleja en cada plato.","RESENIA",5);
+INSERT INTO contactos VALUES (8, "Antonio López","antonio.lopez@gmail.com","Un ambiente acogedor y una comida que te hace sentir como en casa. Muy recomendado.","RESENIA",4);
 
 -- INSERTS de Recetas
 INSERT INTO recetas VALUES(1,"Un plato abundante y sabroso para compartir: la suprema Maryland","La suprema Maryland , también llamada suprema a la maryland o pechuga maryland, se cree que viene de EEUU y es lo más probable por su nombre aunque lo cierto es que es una comida que ya se hizo popular en todo el mundo. Debido a eso, vamos a encontrar recetas muy variadas y una cantidad que les juro que marea. Así que lo mejor es tener en cuenta la base que le da su identidad a la suprema Maryland y a partir de eso experimentar hasta encontrar lo que a cada uno le guste. Y a eso precisamente apunta la receta que les vamos a brindar.","/static/img/suprema.jpg","Suprema Maryland",4,60,"Cómo hacer suprema maryland de la manera más sencilla. Salpimentar a gusto las pechugas de pollo. Preparar tres platos hondos: uno con harina, otro con huevo batido y el tercero con pan rallado. Pasar cada pechuga por harina, luego por huevo y finalmente por pan rallado, cubriendo uniformemente. Calentar suficiente aceite en una sartén a fuego medio. Freír 5-6 minutos por cada lado hasta que estén doradas y cocidas. En una cacerola derretir la mantequilla, añadir la harina y revolver hasta formar una pasta. Verter la leche, revolviendo hasta que espese. Agregar el choclo procesado y cocinar 5 minutos. Pelar las bananas, pasarlas por el huevo batido y luego pan rallado. Freírlas en abundante aceite caliente. Retirar y colocar sobre papel absorbente. Servir caliente las supremas con la salsa y las bananas fritas en el mismo plato. Se pueden acompañar con huevos fritos y papas pay.");
@@ -107,8 +119,10 @@ INSERT INTO ingredientes VALUES(57,4,14,"4 tazas de leche");
 INSERT INTO ingredientes VALUES(58,4,15,"Sal, pimienta y nuez moscada a gusto");
 
 -- SELECTS
+SELECT * FROM contactos;
+
 SELECT * FROM recetario.recetas;
 
-SELECT * FROM recetario.ingredientes ORDER BY idreceta,orden;
+SELECT * FROM recetario.ingredientes where idreceta=4 ORDER BY idreceta,orden;
 
 SELECT r.*,i.orden,i.ingrediente FROM recetas r,ingredientes i where r.idreceta=i.idreceta order by idreceta,orden;
